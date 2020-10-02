@@ -1,4 +1,5 @@
 const Dropzone = require ('dropzone');
+const fabric = require('fabric').fabric;
 
 Dropzone.autoDiscover = false;
 
