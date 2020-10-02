@@ -33561,9 +33561,13 @@ document.addEventListener("DOMContentLoaded", function () {
       'object:scaling': updateControls,
       'object:resizing': updateControls,
       'object:rotating': updateControls
-    }); // set the initial frame
-
-    canvas.setOverlayImage('img/frames/frame-1.png', canvas.renderAll.bind(canvas), {
+    });
+    canvas.setOverlayImage('img/frames/frame-1.png', function () {
+      canvas.overlayImage.scaleToWidth(canvas.getWidth());
+      canvas.renderAll();
+    }, {
+      originX: 'left',
+      originY: 'top',
       crossOrigin: 'anonymous'
     });
   })();
@@ -33664,7 +33668,14 @@ function resizeCanvas() {
 }
 
 function changeFrame(canvas, image) {
-  canvas.setOverlayImage(image, canvas.renderAll.bind(canvas));
+  canvas.setOverlayImage(image, function () {
+    canvas.overlayImage.scaleToWidth(canvas.getWidth());
+    canvas.renderAll();
+  }, {
+    originX: 'left',
+    originY: 'top',
+    crossOrigin: 'anonymous'
+  });
 }
 
 window.addEventListener('resize', function () {
