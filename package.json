@@ -1,0 +1,22 @@
+{
+  "name": "avatar-framer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "postcss.config.js",
+  "dependencies": {
+    "@tailwindcss/ui": "^0.6.2",
+    "autoprefixer": "^10.0.1",
+    "tailwindcss": "^1.8.10"
+  },
+  "devDependencies": {
+    "postcss": "^8.1.1",
+    "postcss-cli": "^8.0.0"
+  },
+  "scripts": {
+    "test": "postcss test.css",
+    "build": "postcss src/css/styles.css -o dist/css/styles.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
