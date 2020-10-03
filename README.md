@@ -44,3 +44,10 @@ npm run build
 
 #### Logo
 * Place a logo image named `logo.png` into thr root of the `img` folder.
+
+
+### Header & Footer
+The header (nav) and footer can be edited by updating `header.html` and `footer.html` respectively. Add your own content.
+
+### TODO
+Make editing copy easier.
