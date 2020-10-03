@@ -1,6 +1,11 @@
 # avatar-framer
 
-A simple tool to create framed profile pictures for social media in support of a cause. Dynamically generate a static site based off of the number of frame images provided. Just provide the images, a logo and your copy. Runs entirely in your browser (no images are uploaded to a server) to minimize privacy concerns. Based on avatar.joebiden.com.
+A simple tool to create framed profile pictures for social media in support of a cause. Dynamically generate a static site based off of the number of frame images provided. Just provide the images, a logo and your copy. Runs entirely in your browser (no images are uploaded to a server) to minimize privacy concerns. Based on http://avatar.joebiden.com.
+
+**Goal:** Create an easily configurable static site, that can be quickly created in a few minutes to support whatever cause you're working on.
+Open to additions and pull requests.
+
+Demo: http://andrewquinn.ca/avatar-framer/
 
 ## Installation
 
