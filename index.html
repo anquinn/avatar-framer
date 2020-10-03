@@ -1,3 +1,8 @@
+---
+# this is an empty front matter
+# needed for jekyll to interpret liquid
+---
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -98,11 +103,12 @@
                     Select your frame.
 
                     <div class="mt-4 grid grid-cols-3 gap-4">
-                        <img id="frame-1" class="object-contain w-full max-w-6 rounded-full border-2 border-gray-100 inline-block shadow-lg transition duration-300 ease-in-out cursor-pointer hover:border-blue-800" src="img/previews/preview-1.png" alt="I Voted Early: BIDEN HARRIS social media avatar frame">
-
-                        <img id="frame-2" class="object-contain w-full max-w-6 rounded-full border-2 border-gray-100 inline-block shadow-lg transition duration-300 ease-in-out cursor-pointer hover:border-blue-800" src="img/previews/preview-2.png" alt="I Voted Early: BIDEN HARRIS social media avatar frame">
-
-                        <img id="frame-3" class="object-contain w-full max-w-6 rounded-full border-2 border-gray-100 inline-block shadow-lg transition duration-300 ease-in-out cursor-pointer hover:border-blue-800" src="img/previews/preview-3.png" alt="I Voted Early: BIDEN HARRIS social media avatar frame">
+                        {% for image in site.static_files %}
+                            {% if image.path contains 'previews/' %}
+                                {% assign imagepath = image.path | split: "/" | last %}
+                                <img id="frame-{{ image.basename | split: '-' | last }}" class="object-contain w-full max-w-6 rounded-full border-2 border-gray-100 inline-block shadow-lg transition duration-300 ease-in-out cursor-pointer hover:border-blue-800" src="{{ site.baseurl }}{{ image.path }}" alt="">
+                            {% endif %}
+                        {% endfor %}
                     </div>
                   </li>
 

@@ -8,7 +8,8 @@
     "autoprefixer": "^10.0.1",
     "dropzone": "^5.7.2",
     "fabric": "^4.2.0",
-    "tailwindcss": "^1.8.10"
+    "tailwindcss": "^1.8.10",
+    "terser": "^5.3.4"
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",
@@ -18,8 +19,10 @@
     "postcss-cli": "^8.0.0"
   },
   "scripts": {
-    "js": "browserify src/js/main.js -t babelify --outfile dist/js/bundle.js",
-    "build": "postcss src/css/styles.css -o dist/css/styles.css"
+    "js": "browserify _site/src/js/main.js -t babelify --outfile _site/dist/js/bundle.js",
+    "min": "terser _site/dist/js/bundle.js --compress --mangle  -o _site/dist/js/bundle.js",
+    "css": "postcss src/css/styles.css -o dist/css/styles.css",
+    "build": "npm run js && npm run css && npm run min && jekyll build"
   },
   "keywords": [],
   "author": "",
