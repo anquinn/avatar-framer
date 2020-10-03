@@ -64,7 +64,7 @@
                         {% for image in site.static_files %}
                             {% if image.path contains 'previews/' %}
                                 {% assign imagepath = image.path | split: "/" | last %}
-                                <img id="frame-{{ image.basename | split: '-' | last }}" class="object-contain w-full max-w-6 rounded-full border-2 border-gray-100 inline-block shadow-lg transition duration-300 ease-in-out cursor-pointer hover:border-blue-800" src="{{ image.path }}" alt="">
+                                <img id="frame-{{ image.basename | split: '-' | last }}" class="object-contain w-full max-w-6 rounded-full border-2 border-gray-100 inline-block shadow-lg transition duration-300 ease-in-out cursor-pointer hover:border-blue-800" src="img/previews/{{ image.name }}" alt="">
                             {% endif %}
                         {% endfor %}
                     </div>
