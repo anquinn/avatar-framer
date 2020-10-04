@@ -17,7 +17,7 @@ Before using avatar-framer, you must ensure that Node.js and Jekyll are installe
 
 2. Install [Jekyll](https://jekyllrb.com/docs/installation)
 
-3. Install dependancies
+3. Install dependancies:
 ```
 npm install
 ```
@@ -48,7 +48,7 @@ npm run build
 * Previews should be named `preview-1`, `preview-2` etc. and match the frame numbering.
 
 #### Logo
-* Place a logo image named `logo.png` into thr root of the `img` folder.
+* Place a logo image named `logo.png` into the root of the `img` folder.
 
 
 ### Header & Footer
