@@ -11,7 +11,7 @@ module.exports = {
     extend: {
       maxWidth: {
       '6': '6rem',
-    },
+      },
     },
   },
   variants: {},

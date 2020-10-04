@@ -10,9 +10,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
   <link rel="stylesheet" href="dist/css/styles.css" />
-
   <script src="dist/js/bundle.js"></script>
-  <title>Avatar Framer</title>
+
+  <title>{{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="icon" href="img/{{ site.favicon }}">
 </head>
 <body>
 
@@ -35,18 +37,15 @@
 
               <div>
                 <h1 class="font-bold text-3xl leading-8">
-                  Show you’re on #TeamBartlet by helping get out the vote on social media!
+                  {{ site.title-text }}
                 </h1>
 
                 <ol class="instructions mt-10">
                   <li class="text-lg leading-5 font-medium">
-                    Upload your picture or another square image below.
-
-
-                      <!-- <input type="file" id="uploadImg"> -->
+                    {{ site.step-1 }}
 
                       <div id="upload" class="mt-4 p-6 w-full bg-gray-100 text-center rounded cursor-pointer hover:text-red-700 hover:underline transition duration-500 ease-in-out">
-                        <span id="upload-text">Drop files here or click to upload.</span>
+                        <span id="upload-text">{{ site.upload-text }}</span>
                       </div>
 
 
@@ -54,11 +53,11 @@
                   </li>
 
                   <li class="text-lg leading-5 font-medium pt-12">
-                    Use the photo tools to scale, rotate, and move your image over the preview.
+                    {{ site.step-2 }}
                   </li>
 
                    <li class="text-lg leading-5 font-medium pt-12">
-                    Select your frame.
+                    {{ site.step-3 }}
 
                     <div class="mt-4 grid grid-cols-3 gap-4">
                         {% for image in site.static_files %}
@@ -71,15 +70,15 @@
                   </li>
 
                   <li class="text-lg leading-5 font-medium pt-12">
-                    Download your new profile image!
+                    {{ site.step-4 }}
 
                     <button class="block max-w-56 mt-4 px-8 py-5 rounded bg-blue-800 text-white text-sm font-bold text-center" id="download" disabled>
-                      Download profile image
+                      {{ site.download-button-text }}
                     </button>
                   </li>
 
                   <li class="text-lg leading-5 font-medium pt-12">
-                    Post on social media using the hashtag #TeamBartlet.
+                    {{ site.step-5 }}
                   </li>                  
                 </ol>
               </div>
