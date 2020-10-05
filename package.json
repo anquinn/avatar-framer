@@ -24,8 +24,7 @@
     "css": "postcss src/css/styles.css -o dist/css/styles.css",
     "prod-css": "postcss _site/src/css/styles.css -o _site/dist/css/styles.css",
     "build": "jekyll build && npm run js && npm run css  && npm run prod-css && npm run min",
-    "build-docs": "rsync -av * docs/ --exclude docs --exclude index.html",
-    "build-gh-pages": "npm run build && cp _config.yml docs/ && cp -R _site/dist docs/ && cp -R _site/img docs/"
+    "build-docs": "npm run build && rsync -av * docs/ --exclude docs --exclude index.html --exclude _config.yml --exclude README.md",
   },
   "keywords": [],
   "author": "",

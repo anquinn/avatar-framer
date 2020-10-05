@@ -13,10 +13,11 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-#
-# YOU WILL LIKELY WANT TO REMOVE THIS LINE
-#
+######################################################
+# NEEDED FOR GITHUB PAGES TO WORK WITH RELATIVE URLS #
+######################################################
 baseurl: /avatar-framer
+######################################################
 
 title: Avatar Framer
 description: >- # this means to ignore newlines"

@@ -39,6 +39,12 @@ jekyll build
 npm run build
 ```
 
+#### Run locally
+```
+jekyll serve
+```
+will start a server with your site at `localhost:4000`. See Jekyll docs for more information.
+
 ### Configuration
 All configuration options can be found in `_config.yml`. Colors can be configured in `tailwind.config.js`.
 

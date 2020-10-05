@@ -13,11 +13,6 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-#
-# YOU WILL LIKELY WANT TO REMOVE THIS LINE
-#
-baseurl: /avatar-framer
-
 title: Avatar Framer
 description: >- # this means to ignore newlines"
   A simple tool to create framed profile pictures for social media in support of a cause.
