@@ -119,6 +119,5 @@ The header including the top nav, and footer can be edited directly by updating 
 * Previews should be named `preview-1`, `preview-2` etc. and match the frame numbering.
 
 
-
 ### Deployment
 After generating your site, copy the contents of `_site` to your sever.
