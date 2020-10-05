@@ -5,13 +5,22 @@ module.exports = {
   },
   purge: {
     enabled: true,
-    content: ['*.html'],
+    content: ['./**/*.html'],
   },
   theme: {
     extend: {
       maxWidth: {
       '6': '6rem',
       },
+      colors: {
+        primary: {
+          default: '#1e429f',
+          dark: '#233876',
+        },
+        secondary: {
+          default: "#e02424",
+        }
+      }
     },
   },
   variants: {},

@@ -29,7 +29,12 @@ step-4: "Download your new profile image!"
 step-5: "Post on social media using the hashtag #TeamBartlet."
 footer-text: "&copy; 2020 Campaign Works, Inc. All rights reserved."
 
-# Buttons and uploaf form
+# Header Nav Link
+#
+nav-link: "http://google.com"
+nav-link-text: "Donate"
+
+# Buttons and upload form
 # 
 upload-text: "Drop files here or click to upload."
 download-button-text: "Download profile picture"

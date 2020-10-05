@@ -4,6 +4,11 @@
 
 @tailwind utilities;
 
+body {
+  font-family: 'Rubik', sans-serif;
+  @apply tracking-wide;
+}
+
 ol.instructions {
   list-style: none;
   counter-reset: my-awesome-counter;
@@ -14,7 +19,7 @@ ol.instructions > li {
 }
 ol.instructions > li::before {
   content: counter(my-awesome-counter) ". ";
-  @apply text-blue-900;
+  @apply text-primary-dark;
   @apply font-bold;
 }
 
