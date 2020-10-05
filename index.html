@@ -5,115 +5,30 @@
 
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-  <link rel="stylesheet" href="dist/css/styles.css" />
-  <script src="dist/js/bundle.js"></script>
-
-  <title>{{ site.title }}</title>
-  <meta name="description" content="{{ site.description }}">
-  <link rel="icon" href="img/{{ site.favicon }}">
-</head>
-<body>
-
-
-<div class="min-h-screen bg-white">
+  {% include head.html %}
   
-  {% include_relative header.html %}
+  <body>
+    <div class="min-h-screen bg-white">
+      
+      {% include nav.html %}
 
-  <div class="py-32 text-blue-800">
-    <main>
-      <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-        <!-- Replace with your content -->
-        <div class="px-4 py-8 sm:px-16">
-          
+      <div class="py-32 text-blue-800">
+        <main>
+          <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="px-4 py-8 sm:px-16">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-x-24">
+                {% include steps.html %}
 
-
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-24">
-
-            <div>
-
-              <div>
-                <h1 class="font-bold text-3xl leading-8">
-                  {{ site.title-text }}
-                </h1>
-
-                <ol class="instructions mt-10">
-                  <li class="text-lg leading-5 font-medium">
-                    {{ site.step-1 }}
-
-                      <div id="upload" class="mt-4 p-6 w-full bg-gray-100 text-center rounded cursor-pointer hover:text-red-700 hover:underline transition duration-500 ease-in-out">
-                        <span id="upload-text">{{ site.upload-text }}</span>
-                      </div>
-
-
-                      <!-- <form action="/file-upload" class="dropzone" id="uploadImg"></form> -->
-                  </li>
-
-                  <li class="text-lg leading-5 font-medium pt-12">
-                    {{ site.step-2 }}
-                  </li>
-
-                   <li class="text-lg leading-5 font-medium pt-12">
-                    {{ site.step-3 }}
-
-                    <div class="mt-4 grid grid-cols-3 gap-4">
-                        {% for image in site.static_files %}
-                            {% if image.path contains 'previews/' %}
-                                {% assign imagepath = image.path | split: "/" | last %}
-                                <img id="frame-{{ image.basename | split: '-' | last }}" class="object-contain w-full max-w-6 rounded-full border-2 border-gray-100 inline-block shadow-lg transition duration-300 ease-in-out cursor-pointer hover:border-blue-800" src="img/previews/{{ image.name }}" alt="">
-                            {% endif %}
-                        {% endfor %}
-                    </div>
-                  </li>
-
-                  <li class="text-lg leading-5 font-medium pt-12">
-                    {{ site.step-4 }}
-
-                    <button class="block max-w-56 mt-4 px-8 py-5 rounded bg-blue-800 text-white text-sm font-bold text-center" id="download" disabled>
-                      {{ site.download-button-text }}
-                    </button>
-                  </li>
-
-                  <li class="text-lg leading-5 font-medium pt-12">
-                    {{ site.step-5 }}
-                  </li>                  
-                </ol>
-              </div>
-
-            </div>
-
-            <div>
-              <canvas id="c" style="border: 1px solid grey; " ></canvas>
-
-              <div class="controls w-full">
-                <div class="pt-6">
-                  <label for="angle-control" class="text-lg font-medium leading-5">Rotation:</label>
-                  <input type="range" id="angle-control" value="0" min="0" max="360" class="w-full" disabled>
-                </div>
-                <div class="pt-6">
-                  <label for="scale-control" class="text-lg font-medium leading-5">Scale:</label>
-                  <input type="range" id="scale-control" value="50" min="1" max="100" class="w-full" disabled>
-                </div>
+                {% include canvas.html %}
               </div>
             </div>
-  
-
-
-  </div>
-
-
-
-        </div>
-        <!-- /End replace -->
+          </div>
+        </main>
       </div>
-    </main>
-  </div>
-</div>
+    </div>
 
-{% include_relative footer.html %}
+    {% include footer.html %}
 
-</body>
+  </body>
 </html>
