@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="dist/css/styles.css" />
+  <script src="dist/js/bundle.js"></script>
+
+  <title>Avatar Framer</title>
+  <meta name="description" content="A simple tool to create framed profile pictures for social media in support of a cause. Dynamically generate a static site based off of the number of frame images provided.">
+  <link rel="icon" href="img/favicon.ico">
+</head>
+  <body>
+    <div class="min-h-screen bg-white">
+      
+      <nav class="bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16">
+      <div class="flex">
+        <div class="flex-shrink-0 flex items-center">
+         <img src="img/logo.png" class="h-12">
+        </div>
+      </div>
+
+      <div class="ml-auto flex-shrink-0 flex items-center">
+        <a href="http://google.com">
+          <span class="inline-flex items-center px-6 py-3 rounded-full text-base font-bold leading-5 bg-secondary text-white hover:bg-primary transition duration-300 ease-in-out">
+            Donate
+          </span>
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</nav>
+
+<div class="text-primary max-w-7xl mx-auto sm:px-6 lg:px-8">
+          <div class="px-4 py-8 sm:px-16">
+            <h1 class="font-bold text-3xl leading-8">avatar-framer Demo</h1>
+            <p class="text-base pt-5">Generate your own site to support your cause. Dynamically generate a static site based off of configuration options and the number of frame images provided. Just provide the images, a logo and your copy. Runs entirely in your browser (no images are uploaded to a server) to minimize privacy concerns.</p>
+
+            <p class="text-base py-5">This demo page was generated with avatar-framer.</p>
+            <a href="https://github.com/anquinn/avatar-framer/">
+              <span class="inline-flex items-center px-6 py-3 rounded-full text-base font-bold leading-5 bg-secondary text-white hover:bg-primary transition duration-300 ease-in-out">
+                Documentation on Github
+              </span>
+            </a>
+          </div>
+      </div>
+
+      <div class="py-32 text-primary">
+        <main>
+          <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="px-4 py-8 sm:px-16">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-x-24">
+                <div>
+  <div>
+    <h1 class="font-bold text-3xl leading-8">
+      Show you’re on #TeamBartlet by helping get out the vote on social media!
+    </h1>
+
+    <ol class="instructions mt-10">
+      <li class="text-lg leading-5 font-medium">
+        Upload your picture or another square image below.
+
+          <div id="upload" class="mt-4 p-6 w-full bg-gray-100 text-center rounded cursor-pointer hover:text-secondary hover:underline transition duration-500 ease-in-out">
+            <span id="upload-text">Drop files here or click to upload.</span>
+          </div>
+
+
+          <!-- <form action="/file-upload" class="dropzone" id="uploadImg"></form> -->
+      </li>
+
+      <li class="text-lg leading-5 font-medium pt-12">
+        Use the photo tools to scale, rotate, and move your image over the preview.
+      </li>
+
+       <li class="text-lg leading-5 font-medium pt-12">
+        Select your frame.
+
+        <div class="mt-4 grid grid-cols-3 gap-4">
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                    
+                    <img id="frame-1" class="object-contain w-full max-w-6 rounded-full border-2 border-gray-100 inline-block shadow-lg transition duration-300 ease-in-out cursor-pointer hover:border-primary" src="img/previews/preview-1.png" alt="">
+                
+            
+                
+                    
+                    <img id="frame-2" class="object-contain w-full max-w-6 rounded-full border-2 border-gray-100 inline-block shadow-lg transition duration-300 ease-in-out cursor-pointer hover:border-primary" src="img/previews/preview-2.png" alt="">
+                
+            
+                
+                    
+                    <img id="frame-3" class="object-contain w-full max-w-6 rounded-full border-2 border-gray-100 inline-block shadow-lg transition duration-300 ease-in-out cursor-pointer hover:border-primary" src="img/previews/preview-3.png" alt="">
+                
+            
+                
+            
+        </div>
+      </li>
+
+      <li class="text-lg leading-5 font-medium pt-12">
+        Download your new profile image!
+
+        <button class="block max-w-56 mt-4 px-8 py-5 rounded bg-primary text-white text-sm font-bold text-center" id="download" disabled>
+          Download profile picture
+        </button>
+      </li>
+
+      <li class="text-lg leading-5 font-medium pt-12">
+        Post on social media using the hashtag #TeamBartlet.
+      </li>                  
+    </ol>
+  </div>
+</div>
+
+                <div>
+  <canvas id="c" style="border: 1px solid grey; " ></canvas>
+
+  <div class="controls w-full">
+    <div class="pt-6">
+      <label for="angle-control" class="text-lg font-medium leading-5">Rotation:</label>
+      <input type="range" id="angle-control" value="0" min="0" max="360" class="w-full" disabled>
+    </div>
+    <div class="pt-6">
+      <label for="scale-control" class="text-lg font-medium leading-5">Scale:</label>
+      <input type="range" id="scale-control" value="50" min="1" max="100" class="w-full" disabled>
+    </div>
+  </div>
+</div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <footer class="bg-white">
+  <div class="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+    <div class="md:grid md:grid-cols-2 md:gap-8">
+      
+      <div class="space-y-8 md:col-span-1">
+        <div class="md:grid md:grid-cols-2 md:gap-8">
+          <div>
+            <h4 class="text-sm leading-5 font-semibold text-gray-400 tracking-wider uppercase">
+              Menu
+            </h4>
+            <ul class="mt-4 space-y-4">
+
+              
+                <li>
+                  <a href="http://google.com" class="text-base leading-6 text-gray-500 hover:text-gray-900">
+                    Awesome page 1
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="http://google.com" class="text-base leading-6 text-gray-500 hover:text-gray-900">
+                    Other page 2
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="http://google.com" class="text-base leading-6 text-gray-500 hover:text-gray-900">
+                    Things!
+                  </a>
+                </li>
+              
+
+            </ul>
+          </div>
+        </div>
+        
+      </div>
+      <div class="mt-12 text-right">
+        <img src="img/logo.png" class="h-16 float-right">
+      </div>
+    </div>
+    <div class="mt-12 border-t border-gray-200 pt-8">
+      <p class="text-base leading-6 text-gray-400 xl:text-center">
+        &copy; 2020 Campaign Works, Inc. All rights reserved.
+      </p>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>

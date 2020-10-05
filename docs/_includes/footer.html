@@ -1,0 +1,36 @@
+<footer class="bg-white">
+  <div class="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+    <div class="md:grid md:grid-cols-2 md:gap-8">
+      
+      <div class="space-y-8 md:col-span-1">
+        <div class="md:grid md:grid-cols-2 md:gap-8">
+          <div>
+            <h4 class="text-sm leading-5 font-semibold text-gray-400 tracking-wider uppercase">
+              Menu
+            </h4>
+            <ul class="mt-4 space-y-4">
+
+              {% for link in site.footer-links %}
+                <li>
+                  <a href="{{ link.link }}" class="text-base leading-6 text-gray-500 hover:text-gray-900">
+                    {{ link.text }}
+                  </a>
+                </li>
+              {% endfor %}
+
+            </ul>
+          </div>
+        </div>
+        
+      </div>
+      <div class="mt-12 text-right">
+        <img src="img/{{ site.logo }}" class="h-16 float-right">
+      </div>
+    </div>
+    <div class="mt-12 border-t border-gray-200 pt-8">
+      <p class="text-base leading-6 text-gray-400 xl:text-center">
+        {{ site.footer-text }}
+      </p>
+    </div>
+  </div>
+</footer>
