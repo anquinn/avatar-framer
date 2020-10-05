@@ -92,6 +92,22 @@ All configuration options can be found in `_config.yml`. Colors can be configure
     link: "http://google.com"
 ```
 
+#### Open Graph and Twitter Cards
+For more information see [Open Graph](https://ogp.me/) and [Twitter cards](https://developer.twitter.com/en/docs/twitter-for-websites/cards/guides/getting-started) docs.
+
+The following configuration options are available in `_config.yml`:
+`og-title`
+`og-description`
+`og-url`
+`og-image`
+`og-image-width`
+`og-image-height`
+`twitter-card`
+`twitter-description`
+`twitter-image`
+`twitter-handle`
+
+
 ### Colors
 avatar-framer is setup with primary and secondary colors in `tailwind.config.js` to generate the site. You can edit the primary and secondary colors directly, or add your own. All [tailwind default colors](https://tailwindcss.com/docs/background-color) are also available.
 ```js
