@@ -68,5 +68,7 @@ exclude:
   - Gemfile.lock
   - node_modules/
   - "*.config.js"
+  - "*.config.json"
   - "package*.json"
-  - gh-pages
+  - README.md
+  - docs

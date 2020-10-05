@@ -24,7 +24,7 @@
     "css": "postcss src/css/styles.css -o dist/css/styles.css",
     "prod-css": "postcss _site/src/css/styles.css -o _site/dist/css/styles.css",
     "build": "jekyll build && npm run js && npm run css  && npm run prod-css && npm run min",
-    "build-gh-pages": "npm run build && cp -R _site/dist gh-pages/ && cp -R _site/img gh-pages/"
+    "build-gh-pages": "npm run build && cp -R _site/dist docs/ && cp -R _site/img docs/"
   },
   "keywords": [],
   "author": "",
