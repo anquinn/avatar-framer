@@ -56,6 +56,18 @@ footer-links:
   - text: "Things!"
     link: "http://google.com"
 
+# Open Graph and Twitter Cards
+#
+og-title: Create your own avatar generating website
+og-description: Create your own avatar generating website
+og-url: https://andrewquinn.ca/avatar-framer
+og-image: "og-image.png"
+og-image-width: 1280
+og-image-height: 640
+twitter-card: summary_large_image
+twitter-description: Create your own avatar generating website
+twitter-image: "og-image.png"
+twitter-handle: "@AndrewQuinn2"
 
 # Exclude from processing.
 # The following items will not be processed, by default.
