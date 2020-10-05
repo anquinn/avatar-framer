@@ -1,0 +1,49 @@
+<div>
+  <div>
+    <h1 class="font-bold text-3xl leading-8">
+      {{ site.title-text }}
+    </h1>
+
+    <ol class="instructions mt-10">
+      <li class="text-lg leading-5 font-medium">
+        {{ site.step-1 }}
+
+          <div id="upload" class="mt-4 p-6 w-full bg-gray-100 text-center rounded cursor-pointer hover:text-secondary hover:underline transition duration-500 ease-in-out">
+            <span id="upload-text">{{ site.upload-text }}</span>
+          </div>
+
+
+          <!-- <form action="/file-upload" class="dropzone" id="uploadImg"></form> -->
+      </li>
+
+      <li class="text-lg leading-5 font-medium pt-12">
+        {{ site.step-2 }}
+      </li>
+
+       <li class="text-lg leading-5 font-medium pt-12">
+        {{ site.step-3 }}
+
+        <div class="mt-4 grid grid-cols-3 gap-4">
+            {% for image in site.static_files %}
+                {% if image.path contains 'previews/' %}
+                    {% assign imagepath = image.path | split: "/" | last %}
+                    <img id="frame-{{ image.basename | split: '-' | last }}" class="object-contain w-full max-w-6 rounded-full border-2 border-gray-100 inline-block shadow-lg transition duration-300 ease-in-out cursor-pointer hover:border-primary" src="img/previews/{{ image.name }}" alt="">
+                {% endif %}
+            {% endfor %}
+        </div>
+      </li>
+
+      <li class="text-lg leading-5 font-medium pt-12">
+        {{ site.step-4 }}
+
+        <button class="block max-w-56 mt-4 px-8 py-5 rounded bg-primary text-white text-sm font-bold text-center" id="download" disabled>
+          {{ site.download-button-text }}
+        </button>
+      </li>
+
+      <li class="text-lg leading-5 font-medium pt-12">
+        {{ site.step-5 }}
+      </li>                  
+    </ol>
+  </div>
+</div>

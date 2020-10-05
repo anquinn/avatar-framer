@@ -5,116 +5,29 @@
 
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-  <link rel="stylesheet" href="dist/css/styles.css" />
+  {% include head.html %}
+  <body>
+    <div class="min-h-screen bg-white">
+      
+      {% include nav.html %}
 
-  <script src="dist/js/bundle.js"></script>
-  <title>Avatar Framer</title>
-</head>
-<body>
+      <div class="py-32 text-primary">
+        <main>
+          <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="px-4 py-8 sm:px-16">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-x-24">
+                {% include steps.html %}
 
-
-<div class="min-h-screen bg-white">
-  
-  {% include_relative header.html %}
-
-  <div class="py-32 text-blue-800">
-    <main>
-      <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-        <!-- Replace with your content -->
-        <div class="px-4 py-8 sm:px-16">
-          
-
-
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-24">
-
-            <div>
-
-              <div>
-                <h1 class="font-bold text-3xl leading-8">
-                  Show you’re on #TeamBartlet by helping get out the vote on social media!
-                </h1>
-
-                <ol class="instructions mt-10">
-                  <li class="text-lg leading-5 font-medium">
-                    Upload your picture or another square image below.
-
-
-                      <!-- <input type="file" id="uploadImg"> -->
-
-                      <div id="upload" class="mt-4 p-6 w-full bg-gray-100 text-center rounded cursor-pointer hover:text-red-700 hover:underline transition duration-500 ease-in-out">
-                        <span id="upload-text">Drop files here or click to upload.</span>
-                      </div>
-
-
-                      <!-- <form action="/file-upload" class="dropzone" id="uploadImg"></form> -->
-                  </li>
-
-                  <li class="text-lg leading-5 font-medium pt-12">
-                    Use the photo tools to scale, rotate, and move your image over the preview.
-                  </li>
-
-                   <li class="text-lg leading-5 font-medium pt-12">
-                    Select your frame.
-
-                    <div class="mt-4 grid grid-cols-3 gap-4">
-                        {% for image in site.static_files %}
-                            {% if image.path contains 'previews/' %}
-                                {% assign imagepath = image.path | split: "/" | last %}
-                                <img id="frame-{{ image.basename | split: '-' | last }}" class="object-contain w-full max-w-6 rounded-full border-2 border-gray-100 inline-block shadow-lg transition duration-300 ease-in-out cursor-pointer hover:border-blue-800" src="img/previews/{{ image.name }}" alt="">
-                            {% endif %}
-                        {% endfor %}
-                    </div>
-                  </li>
-
-                  <li class="text-lg leading-5 font-medium pt-12">
-                    Download your new profile image!
-
-                    <button class="block max-w-56 mt-4 px-8 py-5 rounded bg-blue-800 text-white text-sm font-bold text-center" id="download" disabled>
-                      Download profile image
-                    </button>
-                  </li>
-
-                  <li class="text-lg leading-5 font-medium pt-12">
-                    Post on social media using the hashtag #TeamBartlet.
-                  </li>                  
-                </ol>
-              </div>
-
-            </div>
-
-            <div>
-              <canvas id="c" style="border: 1px solid grey; " ></canvas>
-
-              <div class="controls w-full">
-                <div class="pt-6">
-                  <label for="angle-control" class="text-lg font-medium leading-5">Rotation:</label>
-                  <input type="range" id="angle-control" value="0" min="0" max="360" class="w-full" disabled>
-                </div>
-                <div class="pt-6">
-                  <label for="scale-control" class="text-lg font-medium leading-5">Scale:</label>
-                  <input type="range" id="scale-control" value="50" min="1" max="100" class="w-full" disabled>
-                </div>
+                {% include canvas.html %}
               </div>
             </div>
-  
-
-
-  </div>
-
-
-
-        </div>
-        <!-- /End replace -->
+          </div>
+        </main>
       </div>
-    </main>
-  </div>
-</div>
+    </div>
 
-{% include_relative footer.html %}
+    {% include footer.html %}
 
-</body>
+  </body>
 </html>
