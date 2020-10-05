@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function(){
       'object:rotating': updateControls,
     });
 
-    canvas.setOverlayImage({{ 'img/frames/frame-1.png' | relative_url }} , function() {
+    canvas.setOverlayImage("{{ 'img/frames/frame-1.png' | relative_url }}" , function() {
         canvas.overlayImage.scaleToWidth(canvas.getWidth())
         canvas.renderAll()
       }, {
