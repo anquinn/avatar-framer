@@ -39,6 +39,17 @@ jekyll build
 npm run build
 ```
 
+### Image requirements
+#### Frames
+* Frames should be `2000px x 2000px` for maximum resolution.
+* Frames should be in png format to allow for transparency.
+* All the frames should be named `frame-1`, `frame-2` etc.
+
+#### Previews
+* Previews should be at least `400px x 400px` and square.
+* Previews should be named `preview-1`, `preview-2` etc. and match the frame numbering.
+
+
 #### Run locally
 ```
 jekyll serve
@@ -128,18 +139,6 @@ theme: {
 
 ### Header & Footer
 The header including the top nav, and footer can be edited directly by updating `nav.html` and `footer.html` in the `_includes` directory respectively. 
-
-
-### Image requirements
-#### Frames
-* Frames should be `2000px x 2000px` for maximum resolution.
-* Frames should be in png format to allow for transparency.
-* All the frames should be named `frame-1`, `frame-2` etc.
-
-#### Previews
-* Previews should be at least `400px x 400px` and square.
-* Previews should be named `preview-1`, `preview-2` etc. and match the frame numbering.
-
 
 ### Deployment
 After generating your site, copy the contents of `_site` to your sever.
