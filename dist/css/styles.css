@@ -2689,6 +2689,14 @@ body {
   letter-spacing: 0.025em;
 }
 
+::-moz-selection {
+  background: #e02424;
+}
+
+::selection {
+  background: #e02424;
+}
+
 /*
   Instruction step styles
 */
@@ -5454,6 +5462,18 @@ how to remove the virtical space around the range input in IE*/
 
   .md\:grid {
     display: grid;
+  }
+
+  .md\:float-right {
+    float: right;
+  }
+
+  .md\:mt-0 {
+    margin-top: 0;
+  }
+
+  .md\:text-right {
+    text-align: right;
   }
 
   .md\:gap-8 {

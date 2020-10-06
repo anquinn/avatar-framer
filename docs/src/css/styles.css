@@ -9,6 +9,11 @@ body {
   @apply tracking-wide;
 }
 
+::selection {
+  background: theme('colors.secondary.default');
+}
+
+
 /*
   Instruction step styles
 */
