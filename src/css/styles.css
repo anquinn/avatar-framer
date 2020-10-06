@@ -9,6 +9,9 @@ body {
   @apply tracking-wide;
 }
 
+/*
+  Instruction step styles
+*/
 ol.instructions {
   list-style: none;
   counter-reset: my-awesome-counter;
@@ -29,6 +32,39 @@ ol.instructions > li::before {
 }
 
 
+/*
+  Canvas styles
+*/
+.canvas-container canvas{
+  width: 100%!important;
+  height: 100%!important;
+}
+
+canvas { 
+  min-width: 100%; 
+ 
+  min-height: 100%;
+} 
+
+
+/*
+    dropzone overides
+*/
+.dz-success-mark, .dz-error-mark, .dz-size {
+  display: none !important;
+}
+
+.dz-remove {
+  @apply text-xs;
+  @apply block;
+  @apply mt-2;
+}
+
+
+/* 
+  Input range styes from
+  http://danielstern.ca/range.css/#/
+*/
 input[type=range] {
   width: 100%;
   margin: 7.3px 0;
@@ -61,7 +97,6 @@ input[type=range]::-webkit-slider-thumb {
 input[type=range]:disabled::-webkit-slider-thumb {
   @apply bg-gray-600;
 }
-
 input[type=range]:focus::-webkit-slider-runnable-track {
   @apply bg-gray-300;
 }
@@ -126,38 +161,4 @@ how to remove the virtical space around the range input in IE*/
     margin: 0;
     /*Edge starts the margin from the thumb, not the track as other browsers do*/
   }
-}
-
-
-#c {
-	/*width: 100%;*/
-}
-
-
-
-.canvas-container canvas{
-  width: 100%!important;
-  height: 100%!important;
-}
-
-canvas { 
-  min-width: 100%; 
- 
-  min-height: 100%;
-} 
-
-
-
-
-
-/*dropzone overides*/
-
-.dz-success-mark, .dz-error-mark, .dz-size {
-  display: none !important;
-}
-
-.dz-remove {
-  @apply text-xs;
-  @apply block;
-  @apply mt-2;
 }

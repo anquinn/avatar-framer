@@ -2689,6 +2689,10 @@ body {
   letter-spacing: 0.025em;
 }
 
+/*
+  Instruction step styles
+*/
+
 ol.instructions {
   list-style: none;
   counter-reset: my-awesome-counter;
@@ -2713,6 +2717,39 @@ ol.instructions > li::before {
   background-color: rgba(229, 231, 235, var(--bg-opacity));
   cursor: default;
 }
+
+/*
+  Canvas styles
+*/
+
+.canvas-container canvas{
+  width: 100%!important;
+  height: 100%!important;
+}
+
+canvas {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+/*
+    dropzone overides
+*/
+
+.dz-success-mark, .dz-error-mark, .dz-size {
+  display: none !important;
+}
+
+.dz-remove {
+  font-size: 0.75rem;
+  display: block;
+  margin-top: 0.5rem;
+}
+
+/* 
+  Input range styes from
+  http://danielstern.ca/range.css/#/
+*/
 
 input[type=range] {
   width: 100%;
@@ -2847,32 +2884,6 @@ how to remove the virtical space around the range input in IE*/
     margin: 0;
     /*Edge starts the margin from the thumb, not the track as other browsers do*/
   }
-}
-
-#c {
-  /*width: 100%;*/
-}
-
-.canvas-container canvas{
-  width: 100%!important;
-  height: 100%!important;
-}
-
-canvas {
-  min-width: 100%;
-  min-height: 100%;
-}
-
-/*dropzone overides*/
-
-.dz-success-mark, .dz-error-mark, .dz-size {
-  display: none !important;
-}
-
-.dz-remove {
-  font-size: 0.75rem;
-  display: block;
-  margin-top: 0.5rem;
 }
 
 @media (min-width: 640px) {
