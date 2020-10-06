@@ -39,6 +39,17 @@ jekyll build
 npm run build
 ```
 
+### Image requirements
+#### Frames
+* Frames should be `2000px x 2000px` for maximum resolution.
+* Frames should be in png format to allow for transparency.
+* All the frames should be named `frame-1`, `frame-2` etc.
+
+#### Previews
+* Previews should be at least `400px x 400px` and square.
+* Previews should be named `preview-1`, `preview-2` etc. and match the frame numbering.
+
+
 #### Run locally
 ```
 jekyll serve
@@ -92,6 +103,22 @@ All configuration options can be found in `_config.yml`. Colors can be configure
     link: "http://google.com"
 ```
 
+#### Open Graph and Twitter Cards
+For more information see [Open Graph](https://ogp.me/) and [Twitter cards](https://developer.twitter.com/en/docs/twitter-for-websites/cards/guides/getting-started) docs.
+
+The following configuration options are available in `_config.yml`:
+`og-title`
+`og-description`
+`og-url`
+`og-image`
+`og-image-width`
+`og-image-height`
+`twitter-card`
+`twitter-description`
+`twitter-image`
+`twitter-handle`
+
+
 ### Colors
 avatar-framer is setup with primary and secondary colors in `tailwind.config.js` to generate the site. You can edit the primary and secondary colors directly, or add your own. All [tailwind default colors](https://tailwindcss.com/docs/background-color) are also available.
 ```js
@@ -112,18 +139,6 @@ theme: {
 
 ### Header & Footer
 The header including the top nav, and footer can be edited directly by updating `nav.html` and `footer.html` in the `_includes` directory respectively. 
-
-
-### Image requirements
-#### Frames
-* Frames should be `2000px x 2000px` for maximum resolution.
-* Frames should be in png format to allow for transparency.
-* All the frames should be named `frame-1`, `frame-2` etc.
-
-#### Previews
-* Previews should be at least `400px x 400px` and square.
-* Previews should be named `preview-1`, `preview-2` etc. and match the frame numbering.
-
 
 ### Deployment
 After generating your site, copy the contents of `_site` to your sever.
