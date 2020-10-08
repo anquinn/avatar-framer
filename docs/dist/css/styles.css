@@ -2263,10 +2263,6 @@ video {
   flex-shrink: 0;
 }
 
-.float-right {
-  float: right;
-}
-
 .clearfix:after {
   content: "";
   display: table;
@@ -2496,10 +2492,6 @@ video {
 
 .text-center {
   text-align: center;
-}
-
-.text-right {
-  text-align: right;
 }
 
 .text-white {
