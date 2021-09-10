@@ -137,6 +137,18 @@ theme: {
 },
 ```
 
+### Fonts
+Our defult font is Rubik. You can change this by importing a different font in the top of `style.css` and updating `tailwind.config.js` to incorporate the font.
+```js
+theme: {
+  extend: {
+    fontFamily: {
+        'sans': ['Rubik','Helvetica', 'Arial', 'sans-serif'],
+    },
+  },
+},
+```
+
 ### Header & Footer
 The header including the top nav, and footer can be edited directly by updating `nav.html` and `footer.html` in the `_includes` directory respectively. 
 

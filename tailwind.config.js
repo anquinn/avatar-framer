@@ -1,8 +1,4 @@
 module.exports = {
-  future: {
-    // removeDeprecatedGapUtilities: true,
-    // purgeLayersByDefault: true,
-  },
   purge: {
     enabled: true,
     content: [
@@ -15,17 +11,22 @@ module.exports = {
       },
       colors: {
         primary: {
-          default: '#1e429f',
+          DEFAULT: '#1e429f',
           dark: '#233876',
         },
         secondary: {
-          default: "#e02424",
+          DEFAULT: "#e02424",
         }
-      }
+      },
+      fontFamily: {
+        'sans': ['Rubik','Helvetica', 'Arial', 'sans-serif'],
+      },
     },
   },
   variants: {},
   plugins: [
-    require('@tailwindcss/ui'),
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/aspect-ratio'),
   ],
 }
