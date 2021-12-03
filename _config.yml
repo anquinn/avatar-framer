@@ -13,25 +13,24 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Avatar Framer
+title: DxE Photo Frames
 description: >- # this means to ignore newlines"
-  A simple tool to create framed profile pictures for social media in support of a cause.
-  Dynamically generate a static site based off of the number of frame images provided.
+  A simple tool to create framed profile pictures for social media.
 
 # Copy
 # Fill in your copy for the title and steps here
 # 
-title-text: "Show you’re on #TeamBartlet by helping get out the vote on social media!"
-step-1: "Upload your picture or another square image below."
-step-2: "Use the photo tools to scale, rotate, and move your image over the preview."
-step-3: "Select your frame."
-step-4: "Download your new profile image!"
-step-5: "Post on social media using the hashtag #TeamBartlet."
-footer-text: "&copy; 2020 Campaign Works, Inc. All rights reserved."
+title-text: "Show your support on social media!"
+step-1: "Upload your photo below."
+step-2: "Use the tools in the preview to move, rotate, and scale your photo."
+step-3: "Select a frame."
+step-4: "Download your new profile image."
+step-5: "Set the photo as your profile picture on social media."
+footer-text: "&copy; 2021 Direct Action Everywhere"
 
 # Header Nav Link
 #
-nav-link: "http://google.com"
+nav-link: "http://directactioneverywhere.com/donate"
 nav-link-text: "Donate"
 
 # Buttons and upload form
@@ -47,27 +46,21 @@ favicon: "favicon.ico"
 # Footer links
 # 
 footer-links:
-  - text: "Awesome page 1"
-    link: "http://google.com"
-
-  - text: "Other page 2"
-    link: "http://google.com"
-
-  - text: "Things!"
-    link: "http://google.com"
+  - text: "Support the Right to Rescue"
+    link: "http://righttorescue.com"
 
 # Open Graph and Twitter Cards
 #
-og-title: Create your own avatar generating website
-og-description: Create your own avatar generating website
-og-url: https://andrewquinn.ca/avatar-framer
+og-title: Get your DxE profile frame
+og-description: Show your support for the Right to Rescue
+og-url: http://directactioneverywhere.com
 og-image: "og-image.png"
 og-image-width: 1280
 og-image-height: 640
 twitter-card: summary_large_image
-twitter-description: Create your own avatar generating website
+twitter-description: Create your DxE profile frame
 twitter-image: "og-image.png"
-twitter-handle: "@AndrewQuinn2"
+twitter-handle: "@dxeverywhere"
 
 # Exclude from processing.
 # The following items will not be processed, by default.
