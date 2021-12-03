@@ -39,12 +39,6 @@ document.addEventListener("DOMContentLoaded", function(){
 
     var $ = function(id){return document.getElementById(id)};
 
-    var angleControl = $('angle-control');
-    angleControl.oninput = function() {
-      image.set('angle', parseInt(this.value, 10)).setCoords();
-      canvas.requestRenderAll();
-    };
-
     var scaleControl = $('scale-control');
     scaleControl.oninput = function() {
       image.scale(parseFloat(this.value)/200).setCoords();
@@ -53,7 +47,6 @@ document.addEventListener("DOMContentLoaded", function(){
 
     function updateControls() {
       scaleControl.value = image.scaleX;
-      angleControl.value = image.angle;
     }
     canvas.on({
       'object:moving': updateControls,
@@ -115,7 +108,6 @@ document.addEventListener("DOMContentLoaded", function(){
   imgUpload.on("addedfile", function(file) {
     reader.readAsDataURL(file);
     document.getElementById("download").disabled = false;
-    document.getElementById("angle-control").disabled = false;
     document.getElementById("scale-control").disabled = false;
     document.getElementById("upload-text").innerHTML = "";
   });
@@ -127,7 +119,6 @@ document.addEventListener("DOMContentLoaded", function(){
   imgUpload.on("removedfile", function() {
     canvas.remove(image);
     document.getElementById("download").disabled = true;
-    document.getElementById("angle-control").disabled = true;
     document.getElementById("scale-control").disabled = true;
     document.getElementById("upload-text").innerHTML = "Drop files here or click to upload.";
   });
