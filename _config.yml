@@ -72,8 +72,10 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules/
+  - pnpm-lock.yaml
   - "*.config.js"
   - "*.config.json"
   - "package*.json"
   - README.md
+  - README-DxE.md
   - docs
