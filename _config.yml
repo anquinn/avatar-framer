@@ -78,6 +78,7 @@ exclude:
   - .jekyll-cache/
   - Gemfile
   - Gemfile.lock
+  - pnpm-lock.yaml
   - node_modules/
   - "*.config.js"
   - "*.config.json"

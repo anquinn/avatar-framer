@@ -15,14 +15,19 @@ Open to additions and pull requests.
 
 Before using avatar-framer, you must ensure that Node.js and Jekyll are installed on your system. To install, do the following:
 
-1. Install [Node.js](https://nodejs.org) and npm.
+1. Install [Node.js](https://nodejs.org) and pnpm.
 
-2. Install [Jekyll](https://jekyllrb.com/docs/installation)
+2. Install [Jekyll](https://jekyllrb.com/docs/installation). After installing
+   Ruby and Bundler, run `bundle install` to get the correct version of Jekyll.
 
 3. Install dependancies:
 ```
-npm install
+pnpm install
 ```
+
+If you are using the devcontainer configuration in this project, these tools
+will be installed for you automatically in the container and you will not need
+to install them on your host system.
 
 ### Usage - Generate your site
 1. Add your frames to `img/frames`
@@ -36,8 +41,10 @@ jekyll build
 4. Create styles and and minify assets:
 
 ```
-npm run build
+pnpm run build
 ```
+
+5. Preview the site using `pnpm run serve` and going to http://localhost:8080
 
 ### Image requirements
 #### Frames
