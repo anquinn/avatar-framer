@@ -1,0 +1,28 @@
+// Use this devcontainer configuration to avoid installing project dependencies
+// like NPM and Ruby directly on your developer workstation, and to avoid
+// version conflicts with other projects.
+
+// Using this container, you can skip over the dependencies section in the
+// README and skip to the usage section.
+
+// Instructions for using dev containers in Visual Studio Code:
+// https://code.visualstudio.com/docs/devcontainers/containers
+
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/alpine
+{
+	"name": "Avatar Framer",
+	"image": "mcr.microsoft.com/devcontainers/ruby:3",  // Includes Bundler
+
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	"features": {
+		"ghcr.io/devcontainers/features/node:1": {  // Includes NPM
+			"nodeGypDependencies": true
+		}
+	},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	"forwardPorts": [8080],
+
+	"postCreateCommand": "npm install && bundle install"
+}
