@@ -25,8 +25,7 @@
     "min": "terser _site/dist/js/bundle.js --compress --mangle  -o _site/dist/js/bundle.js",
     "css": "postcss src/css/styles.css -o dist/css/styles.css",
     "prod-css": "postcss _site/src/css/styles.css -o _site/dist/css/styles.css",
-    "build": "bundle exec jekyll build && npm run js && npm run css  && npm run prod-css && npm run min",
-    "build-docs": "npm run build && rsync -av * docs/ --exclude docs --exclude index.html --exclude _config.yml --exclude README.md"
+    "build": "bundle exec jekyll build && npm run js && npm run css  && npm run prod-css && npm run min"
   },
   "keywords": [],
   "author": "",

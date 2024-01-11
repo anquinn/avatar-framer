@@ -83,4 +83,3 @@ exclude:
   - "*.config.json"
   - "package*.json"
   - README.md
-  - docs
