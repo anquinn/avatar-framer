@@ -6,4 +6,5 @@
 # Dev
 node_modules/
 _site/
+dist/
 .jekyll-cache/
