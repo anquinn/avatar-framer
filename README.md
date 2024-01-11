@@ -11,17 +11,22 @@ Open to additions and pull requests.
 
 ## Installation
 
-### Install Node.js and Jekyll
+### Install Node and Ruby dependencies
 
-Before using avatar-framer, you must ensure that Node.js and Jekyll are installed on your system. To install, do the following:
+Before using avatar-framer, you must install its dependencies by doing the
+following:
 
-1. Install [Node.js](https://nodejs.org) and npm.
+<!-- Node.js and NPM may be installed together; link goes to a Google search for
+     the latest instructions. -->
+1. Install [Node.js and NPM](https://www.google.com/search?q=installing+NPM).
 
-2. Install [Jekyll](https://jekyllrb.com/docs/installation)
+2. Install [Ruby](https://www.ruby-lang.org/en/downloads/) and [Bundler](https://bundler.io/).
 
 3. Install dependancies:
+
 ```
 npm install
+bundle install
 ```
 
 ### Usage - Generate your site
@@ -38,6 +43,8 @@ jekyll build
 ```
 npm run build
 ```
+
+5. Preview the site using `npm run serve` and going to http://localhost:8080
 
 ### Image requirements
 #### Frames
