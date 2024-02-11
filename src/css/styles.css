@@ -14,7 +14,6 @@ body {
   background: theme('colors.secondary.DEFAULT');
 }
 
-
 /*
   Instruction step styles
 */
@@ -48,8 +47,8 @@ ol.instructions > li::before {
 
 canvas { 
   min-width: 100%; 
- 
   min-height: 100%;
+  @apply rounded-lg;
 } 
 
 

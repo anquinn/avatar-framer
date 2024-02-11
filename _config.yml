@@ -69,6 +69,9 @@ twitter-description: Create your own avatar generating website
 twitter-image: "og-image.png"
 twitter-handle: "@AndrewQuinn2"
 
+keep_files:
+  - dist/js/bundle.js
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
