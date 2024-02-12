@@ -789,12 +789,12 @@ select {
   width: 100%;
 }
 
-.max-w-56 {
-  max-width: 14rem;
-}
-
 .max-w-6 {
   max-width: 6rem;
+}
+
+.max-w-60 {
+  max-width: 15rem;
 }
 
 .max-w-7xl {
@@ -1115,6 +1115,7 @@ ol.instructions > li::before {
 .canvas-container canvas{
   width: 100%!important;
   height: 100%!important;
+  border-radius: 0.5rem;
 }
 
 canvas { 
@@ -1122,6 +1123,10 @@ canvas {
   min-height: 100%; 
   border-radius: 0.5rem;
 } 
+
+.lower-canvas, .upper-canvas {
+  border-radius: 0.5rem;
+}
 
 
 /*
