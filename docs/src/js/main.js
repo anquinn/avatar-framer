@@ -140,6 +140,7 @@ document.addEventListener("DOMContentLoaded", function(){
       {% if image.path contains 'frames/' %}
           document.getElementById("{{ image.basename }}").addEventListener("click", function (){
             changeFrame(canvas, '{{ image.path | relative_url }}');
+            console.log("{{ image.basename }}"); 
           });
       {% endif %}
   {% endfor %}

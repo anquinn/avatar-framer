@@ -2,17 +2,17 @@
 
 @tailwind components;
 
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
+
 @tailwind utilities;
 
 body {
-  font-family: 'Rubik', sans-serif;
   @apply tracking-wide;
 }
 
 ::selection {
-  background: theme('colors.secondary.default');
+  background: theme('colors.secondary.DEFAULT');
 }
-
 
 /*
   Instruction step styles
@@ -43,13 +43,18 @@ ol.instructions > li::before {
 .canvas-container canvas{
   width: 100%!important;
   height: 100%!important;
+  @apply rounded-lg;
 }
 
 canvas { 
   min-width: 100%; 
- 
   min-height: 100%;
+  @apply rounded-lg;
 } 
+
+.lower-canvas, .upper-canvas {
+  @apply rounded-lg;
+}
 
 
 /*
@@ -91,7 +96,7 @@ input[type=range]::-webkit-slider-thumb {
   margin-top: -7.3px;
   width: 26px;
   height: 26px;
-  @apply bg-blue-800;
+  @apply bg-primary;
   border: 0px solid rgba(0, 0, 0, 0);
   border: 0;
   border-radius: 15px;
@@ -116,7 +121,7 @@ input[type=range]::-moz-range-track {
 input[type=range]::-moz-range-thumb {
   width: 26px;
   height: 26px;
-  @apply bg-blue-800;
+  @apply bg-primary;
   border: 0px solid rgba(0, 0, 0, 0);
   border: 0;
   border-radius: 15px;
@@ -144,7 +149,7 @@ input[type=range]::-ms-fill-upper {
 input[type=range]::-ms-thumb {
   width: 26px;
   height: 26px;
-  @apply bg-blue-800;
+  @apply bg-primary;
   border: 0px solid rgba(0, 0, 0, 0);
   border: 0;
   border-radius: 15px;
