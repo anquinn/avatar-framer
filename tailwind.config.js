@@ -1,13 +1,9 @@
 module.exports = {
-  purge: {
-    enabled: true,
-    content: [
-      './**/*.html',],
-  },
+  content: ["*.{html,js}", "_includes/*.html", "src/js/*.{html,js}"],
   theme: {
     extend: {
       maxWidth: {
-      '6': '6rem',
+        '6': '6rem',
       },
       colors: {
         primary: {
@@ -19,14 +15,12 @@ module.exports = {
         }
       },
       fontFamily: {
-        'sans': ['Rubik','Helvetica', 'Arial', 'sans-serif'],
+        'sans': ['Rubik', 'Helvetica', 'Arial', 'sans-serif'],
       },
     },
   },
-  variants: {},
   plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
-    require('@tailwindcss/aspect-ratio'),
   ],
 }

@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function(){
     });
   };
 
-  // when the image is uplaoded
+  // when the image is uploaded
   // call the reader to add it to the canvas
   // enable the download button and controls
   // remove the upload text
@@ -140,6 +140,7 @@ document.addEventListener("DOMContentLoaded", function(){
       {% if image.path contains 'frames/' %}
           document.getElementById("{{ image.basename }}").addEventListener("click", function (){
             changeFrame(canvas, '{{ image.path | relative_url }}');
+            console.log("{{ image.basename }}"); 
           });
       {% endif %}
   {% endfor %}

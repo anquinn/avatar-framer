@@ -14,7 +14,6 @@ body {
   background: theme('colors.secondary.DEFAULT');
 }
 
-
 /*
   Instruction step styles
 */
@@ -44,13 +43,18 @@ ol.instructions > li::before {
 .canvas-container canvas{
   width: 100%!important;
   height: 100%!important;
+  @apply rounded-lg;
 }
 
 canvas { 
   min-width: 100%; 
- 
   min-height: 100%;
+  @apply rounded-lg;
 } 
+
+.lower-canvas, .upper-canvas {
+  @apply rounded-lg;
+}
 
 
 /*
