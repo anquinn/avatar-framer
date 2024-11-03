@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function(){
     });
   };
 
-  // when the image is uplaoded
+  // when the image is uploaded
   // call the reader to add it to the canvas
   // enable the download button and controls
   // remove the upload text

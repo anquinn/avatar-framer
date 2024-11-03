@@ -1,6 +1,6 @@
 {
   "name": "avatar-framer",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "postcss.config.js",
   "dependencies": {
@@ -29,7 +29,9 @@
     "css": "postcss src/css/styles.css -o dist/css/styles.css",
     "prod-css": "postcss _site/src/css/styles.css -o _site/dist/css/styles.css",
     "build": "bundle exec jekyll build && npm run js && npm run css  && npm run prod-css && npm run min",
-    "build-docs": "npm run build && rsync -av * docs/ --exclude docs --exclude index.html --exclude _config.yml --exclude README.md"
+    "build-docs": "npm run build && rsync -av * docs/ --exclude docs --exclude index.html --exclude _config.yml --exclude README.md",
+    "watch:css": "postcss src/css/styles.css -o dist/css/styles.css --watch",
+    "dev": "concurrently --kill-others-on-fail --names \"JS,JEKYLL,CSS\" --prefix-colors \"bgBlue.bold,bgGreen.bold,bgMagenta.bold\" \"npm run js\" \"sleep 5 && bundle exec jekyll serve --livereload --livereload-min-delay 2\" \"npm run watch:css\""
   },
   "keywords": [],
   "author": "Andrew Quinn",
