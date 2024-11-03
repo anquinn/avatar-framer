@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function(){
     });
   };
 
-  // when the image is uplaoded
+  // when the image is uploaded
   // call the reader to add it to the canvas
   // enable the download button and controls
   // remove the upload text
@@ -172,6 +172,11 @@ function resizeCanvas() {
 }
 
 function changeFrame(canvas, image) {
+  // Use relative paths to properly locate images when this site is being served
+  // under a base path such as "example.org/image-framer"
+  if (image.startsWith('/')) {
+    image = image.substring(1);
+  }
   canvas.setOverlayImage(image, function() {
         canvas.overlayImage.scaleToWidth(canvas.getWidth())
         canvas.renderAll()

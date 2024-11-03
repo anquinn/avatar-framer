@@ -732,6 +732,10 @@ select {
 
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
 
+.relative {
+  position: relative;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -793,8 +797,8 @@ select {
   max-width: 6rem;
 }
 
-.max-w-60 {
-  max-width: 15rem;
+.max-w-64 {
+  max-width: 16rem;
 }
 
 .max-w-7xl {
